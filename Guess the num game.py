@@ -1,5 +1,6 @@
 # Number guessing game
 import random
+import time
 ime = input('Unesite vase ime: ')
 print('Zdravo gosn ' + str(ime) + ' pogodite koji broj sam zamislio od 1 do 20!') 
 tajniBroj = random.randint(1,20)
@@ -9,7 +10,9 @@ for brojPokusaja in range (1,7):
     try:
         a = int(input())
     except:
-        print('Motherfucker')
+        print('Motherfucker y u so rude? ')
+        time.sleep(3)
+        quit()
     if a > tajniBroj:
         print('Prevelik broj ')
     elif a < tajniBroj:
